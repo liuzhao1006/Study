@@ -1,4 +1,4 @@
-package com.sydauto.study.utils;
+package com.sydauto.study.video.utils;
 
 import android.os.Build;
 import android.view.Surface;
@@ -7,11 +7,10 @@ import android.view.Surface;
  * Created by Zhang Tingkuo.
  * Date: 2017-07-21
  * Time: 15:26
+ * @author liuchao
  */
 
 public class FFUtils {
-
-
 
     public static native String urlProtocolInfo();
 

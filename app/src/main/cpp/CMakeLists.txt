@@ -62,6 +62,8 @@ set_target_properties(avdevice
 
 include_directories(${CMAKE_SOURCE_DIR}/includes)
 
+find_package(RapidJSON)
+
 target_link_libraries(native-lib
         avutil swresample swscale avcodec avformat avfilter avdevice
         ${log-lib} ${android-lib} )

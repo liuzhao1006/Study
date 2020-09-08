@@ -1,4 +1,4 @@
-package com.sydauto.study.widget;
+package com.sydauto.study.video.widget;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -9,7 +9,7 @@ import android.util.Log;
 import android.view.Surface;
 import android.view.SurfaceView;
 
-import com.sydauto.study.utils.FFUtils;
+import com.sydauto.study.video.utils.FFUtils;
 
 
 /**

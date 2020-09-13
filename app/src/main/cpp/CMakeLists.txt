@@ -8,7 +8,6 @@ find_library(android-lib android)
 find_library(log-lib
               log )
 
-
 set(JNI_LIBS_DIR ${CMAKE_SOURCE_DIR}/../jni)
 
 add_library(avutil

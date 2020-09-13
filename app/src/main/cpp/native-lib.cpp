@@ -39,7 +39,7 @@ extern "C" {
 
 
 JNIEXPORT jstring JNICALL
-Java_com_sydauto_study_utils_FFUtils_urlProtocolInfo(JNIEnv *env, jclass type) {
+Java_com_sydauto_study_video_utils_FFUtils_urlProtocolInfo(JNIEnv *env, jclass type) {
     char info[40000] = {0};
     av_register_all();
 
@@ -61,7 +61,7 @@ Java_com_sydauto_study_utils_FFUtils_urlProtocolInfo(JNIEnv *env, jclass type) {
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_sydauto_study_utils_FFUtils_avFormatInfo(JNIEnv *env, jclass type) {
+Java_com_sydauto_study_video_utils_FFUtils_avFormatInfo(JNIEnv *env, jclass type) {
     char info[40000] = {0};
 
     av_register_all();
@@ -81,7 +81,7 @@ Java_com_sydauto_study_utils_FFUtils_avFormatInfo(JNIEnv *env, jclass type) {
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_sydauto_study_utils_FFUtils_avCodecInfo(JNIEnv *env, jclass type) {
+Java_com_sydauto_study_video_utils_FFUtils_avCodecInfo(JNIEnv *env, jclass type) {
     char info[40000] = {0};
 
     av_register_all();
@@ -116,7 +116,7 @@ Java_com_sydauto_study_utils_FFUtils_avCodecInfo(JNIEnv *env, jclass type) {
 }
 
 JNIEXPORT jstring JNICALL
-Java_com_sydauto_study_utils_FFUtils_avFilterInfo(JNIEnv *env, jclass type) {
+Java_com_sydauto_study_video_utils_FFUtils_avFilterInfo(JNIEnv *env, jclass type) {
     char info[40000] = {0};
     avfilter_register_all();
 
@@ -130,7 +130,7 @@ Java_com_sydauto_study_utils_FFUtils_avFilterInfo(JNIEnv *env, jclass type) {
 }
 
 JNIEXPORT void JNICALL
-Java_com_sydauto_study_utils_FFUtils_playVideo(JNIEnv *env, jclass type, jstring videoPath_,
+Java_com_sydauto_study_video_utils_FFUtils_playVideo(JNIEnv *env, jclass type, jstring videoPath_,
                                                  jobject surface) {
     const char *videoPath = env->GetStringUTFChars(videoPath_, 0);
     ALOGI("PlayVideo: %s", videoPath);
@@ -338,16 +338,9 @@ Java_com_sydauto_study_utils_FFUtils_playVideo(JNIEnv *env, jclass type, jstring
 
 }
 
-extern "C" JNIEXPORT jstring JNICALL
-Java_com_sydauto_study_utils_FFUtils_stringFromJNI(
-        JNIEnv* env,
-        jobject /* this */) {
-    std::string hello = "Hello from C++";
-    return env->NewStringUTF(hello.c_str());
-}
 extern "C"
 JNIEXPORT jstring JNICALL
-Java_com_sydauto_study_video_utils_FFUtils_stringFromJNI(JNIEnv *env, jobject thiz) {
+Java_com_sydauto_study_video_utils_FFUtils_stringFromJNI(JNIEnv *env, jclass thiz) {
 
     testAddMember();
     testSimpleWriter();

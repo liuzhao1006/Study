@@ -1,12 +1,11 @@
 package com.sydauto.study;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.viewpager.widget.ViewPager;
 
 import com.sydauto.base.mvp.BaseSydActivity;
 import com.sydauto.study.mvp.IMvpService;
@@ -52,6 +51,7 @@ public class MainActivity extends BaseSydActivity<MvpServiceImpl> implements IMv
             // 绑定View接口用的
             mService.notifyBindView();
         }
+        ViewPager viewPager = new ViewPager(this);
     }
 
     public void onButtonClick(View view) {
@@ -68,7 +68,8 @@ public class MainActivity extends BaseSydActivity<MvpServiceImpl> implements IMv
                 setInfoText(FFUtils.avFilterInfo());
                 break;
             case R.id.button_format:
-                setInfoText(FFUtils.avFormatInfo());
+//                setInfoText(FFUtils.avFormatInfo());
+                setInfoText(FFUtils.stringFromJNI());
                 break;
             case R.id.button_play:
                 String videoPath = Environment.getExternalStorageDirectory() + "/DCIM/Camera/VID_20200903_183610.mp4";

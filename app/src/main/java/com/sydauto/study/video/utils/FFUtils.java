@@ -22,6 +22,6 @@ public class FFUtils {
 
     public static native void playVideo(String videoPath, Surface surface);
 
-    public native String stringFromJNI ();
+    public static native String stringFromJNI ();
 
 }

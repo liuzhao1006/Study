@@ -1,6 +1,12 @@
 package com.sydauto.study;
 
+import org.eclipse.leshan.client.demo.LeshanClientDemo;
+import org.eclipse.leshan.core.model.InvalidDDFFileException;
+import org.eclipse.leshan.core.model.InvalidModelException;
+import org.eclipse.leshan.core.model.ObjectLoader;
 import org.junit.Test;
+
+import java.io.IOException;
 
 import static org.junit.Assert.*;
 
@@ -12,6 +18,16 @@ import static org.junit.Assert.*;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect () {
-        assertEquals(4, 2 + 2);
+        RegisterDemo demo = new RegisterDemo();
+        demo.demo();
+//        try {
+//            ObjectLoader.loadDdfResources("/models/", LeshanClientDemo.modelPaths, true);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (InvalidModelException e) {
+//            e.printStackTrace();
+//        } catch (InvalidDDFFileException e) {
+//            e.printStackTrace();
+//        }
     }
 }

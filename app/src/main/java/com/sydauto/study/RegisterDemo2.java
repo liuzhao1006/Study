@@ -457,6 +457,7 @@ public class RegisterDemo2 {
 
         locationInstance = new MyLocation(latitude, longitude, scaleFactor);
 
+
         // Initialize model
         List<ObjectModel> models = ObjectLoader.loadDefault();
         models.addAll(ObjectLoader.loadDdfResources("/models", modelPaths));
